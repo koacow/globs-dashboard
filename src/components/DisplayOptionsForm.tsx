@@ -180,7 +180,7 @@ export default function DisplayOptionsForm({ options, setOptions, refetch, loadi
                     value={options.aggregateLevel}
                     onChange={handleAggregateLevelChange}
                 >
-                    <FormControlLabel value="daily" control={<Radio />} label="Daily" />
+                    <FormControlLabel value="daily" control={<Radio />} label="Daily" disabled={options.actor1CountryCode == "WLD" || options.actor2CountryCode == "WLD"} />
                     <FormControlLabel value="monthly" control={<Radio />} label="Monthly" />
                     <FormControlLabel value="yearly" control={<Radio />} label="Yearly" />
                 </RadioGroup>
