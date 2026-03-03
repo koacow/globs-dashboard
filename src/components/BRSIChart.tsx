@@ -60,9 +60,11 @@ const BRSIChart: React.FC<BRSIChartProps> = ({
                     vertical: true,
                     horizontal: true,
                 }}
+                
                 hideLegend={!data || data.numRecords === 0 || loading}
                 xAxis={[
                     {
+                        tickNumber: Math.max(10, data ? data.numRecords : 10),
                         dataKey: 'date',
                         valueFormatter: (value) => {
                             if (!data) {
