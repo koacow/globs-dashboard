@@ -141,7 +141,7 @@ export default function DisplayOptionsForm({ options, setOptions, refetch, loadi
                         },
                     }}
                 >
-                    {sortedCountries.map((country) => (
+                    {sortedCountries.filter((country) => country.country_code !== 'WLD').map((country) => (
                         <MenuItem key={country.country_code} value={country.country_code}>
                             {`${country.country_name} (${country.country_code})`}
                         </MenuItem>
