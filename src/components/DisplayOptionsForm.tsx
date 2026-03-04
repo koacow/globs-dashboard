@@ -105,8 +105,8 @@ export default function DisplayOptionsForm({ options, setOptions, refetch, loadi
                     setOptions({
                         ...options,
                         actor1CountryCode: options.actor2CountryCode,
-                        actor2CountryCode: options.actor1CountryCode,
-                    });
+                        actor2CountryCode: options.actor1CountryCode === 'WLD' ? 'USA' : options.actor1CountryCode,
+                    })
                 }}
                 className="w-fit h-fit col-start-1 col-span-2"
             >
