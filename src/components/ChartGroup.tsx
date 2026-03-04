@@ -23,7 +23,7 @@ function ChartGroup({ index, removeChartGroup }: ChartGroupProps) {
     actor2CountryCode: 'CHN',
     startDate: dayjs('2024-01-01'),
     endDate: dayjs(),
-    aggregateLevel: 'daily'
+    aggregateLevel: 'monthly'
   });
 
   const { refetch, isLoading, isRefetching, isError, error, data } = useQuery({
