@@ -38,7 +38,8 @@ function ChartGroup({ index, removeChartGroup }: ChartGroupProps) {
       aggregateLevel: displayOptions.aggregateLevel,
       numRecords: 0,
       records: [],
-    }
+    },
+    retry: 1,
   })
 
   return (
