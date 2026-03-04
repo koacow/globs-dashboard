@@ -190,7 +190,7 @@ export default function DisplayOptionsForm({ options, setOptions, refetch, loadi
                 onClick={() => {
                 refetch();
                 }}
-                disabled={loading || options.startDate.isAfter(options.endDate) || options.startDate.isSame(options.endDate)}
+                disabled={loading || options.startDate.isAfter(options.endDate) || options.startDate.isSame(options.endDate) || (options.aggregateLevel == 'daily' && (options.actor1CountryCode == "WLD" || options.actor2CountryCode == "WLD"))}
                 className="col-span-2 w-fit"
             >
                 Fetch Data
